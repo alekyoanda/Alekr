@@ -1,0 +1,309 @@
+
+/* Warna-warna
+    #05386b : Biru Tua
+    #379683: Hijau tua
+    #5cdb95: Hijau header page
+    #8ee4af: hijau main page
+    #edf5e1: cream
+*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #01101c;
+    font-family: 'Poppins', sans-serif;
+    color: lightsalmon;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    height: 75px;
+    /* background-color: #04101b; */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+nav .logo{
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 7px;
+    font-size: 2.5em;
+    margin: 0 5%;
+
+}
+nav .logo span{
+    color: lightsalmon;
+    letter-spacing: 3px;
+}
+
+nav .logo a{
+    text-decoration: none;
+    color: rgb(223, 220, 210);
+    transition: all 0.3s;
+}
+
+nav .logo a:hover{
+    text-decoration: none;
+    color: lightsalmon;
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 33%;
+    justify-content: space-around;
+    margin: auto 30px;
+    letter-spacing: 1.5px;
+    margin-right: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(236, 232, 219);
+    transition: all 0.3s;
+    padding: 5px 20px;
+    font-size: 0.75em;
+}
+
+nav ul li a.contact-me{
+    background-color: #ee7358;
+    border-radius: 10px;
+}
+nav ul li a.contact-me:hover{
+    background-color: salmon;
+    color: rgb(236, 232, 219);
+}
+
+ul li a:hover{
+    color :rgb(204, 198, 176);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #04192b;
+    border-radius: 10px;
+}
+
+nav .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+    height: 18px;
+}
+
+nav .hamburger-menu span{
+    width: 30px;
+    height: 1.6px;
+    background-color: white;
+    transition: all 0.7s;
+}
+nav.nav-colored { 
+    background-color:#020b14;
+    transition: all 0.3s;
+ }
+nav.nav-transparent { 
+    background-color:transparent;
+    transition: all 0.3s;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0 0 30px;
+    align-items: center;
+}
+
+.content.section{
+     width: 50%;
+}
+
+.content .section.satu{
+    margin: 0 5%;
+    font-size: 0.95em;
+    margin-right: 40px;
+    z-index: -2;
+    padding-bottom: 80px;
+    animation: transitionIn 2s;
+}
+
+.content .section.satu h2{
+    font-size: 3.5em;
+}
+
+.content .section.satu h4{
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.content .section.satu #com-science{
+    font-weight: 400;
+    color: 	white;
+}
+
+.content .section.satu #line{
+    font-weight: 400;
+}
+
+.content .section.satu #Univ{
+    font-weight: 200;
+    color: white;
+}
+.content .section.dua{
+    max-width: 35%;
+    animation: transitionIn 2s;
+}
+.content .section.dua img{
+    max-width: 100%;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-45deg);
+        transform: rotateY(-30deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+        transform: rotateY(0);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .content .section.satu{
+        text-align: center;
+    }
+    .content .section.satu h2{
+        font-size: 2.5em;
+    }
+    .content .section.satu h4{
+        font-size: 1.25em;
+    }
+
+    nav ul{
+        width: 50%;
+        font-size: 0.85em;
+    }
+    nav .logo a{
+        font-size: 0.9em;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 30px;
+        margin-top: 100px;
+    }
+    .content .section.dua {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .content .section.satu{
+        text-align: center;
+    }
+    .content .section.satu h2{
+        font-size: 2.5em;
+    }
+    .content .section.satu h4{
+        font-size: 1.25em;
+    }
+    nav{
+        top:0;
+        width: 100%;
+        position: fixed;
+        background-color:#01101f;
+    }
+    .content{
+        margin-top: 100px;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+    nav .logo a{
+        font-size: 0.9em;
+    }
+    nav{
+        z-index: 1;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.2em;
+        margin-right: 0;
+        background-color: coral;
+        height: 100vh;
+        width: 60%;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    .content .section{
+        margin: 30px auto;
+        margin-bottom: 0;
+    }
+    .content .section.satu{
+        margin-right: 20px;
+        padding-bottom: 0;
+    }
+    .content .section.dua {
+        max-width: 70%;
+    }
+    nav .hamburger-menu {
+        display: flex;
+        z-index: 1;
+        cursor: pointer;
+    }
+    nav ul li a.contact-me{
+        background: none;
+    }
+    nav ul li a.contact-me:hover{
+        background: coral;
+        color: rgb(204, 198, 176);
+    }
+    ul li a:hover{
+        background-color: coral;
+    }
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .hamburger-menu span{
+        transition: all 1s;
+    }
+    .hamburger-menu span:first-child{
+        transform-origin: 0 0;
+    }
+    .hamburger-menu span:last-child{
+        transform-origin: 0 100%;
+    }
+    .hamburger-menu span:first-child.exit{
+        transition:all 1s;
+        transform: rotate(40deg);
+    }
+    .hamburger-menu span:nth-child(2).exit{
+        opacity: 0;
+    }
+    .hamburger-menu span:last-child.exit{
+        transform: rotate(-40deg) translate(-1px, 2px);
+    }
+}

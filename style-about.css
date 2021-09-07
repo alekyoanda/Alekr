@@ -1,0 +1,248 @@
+
+/* Warna-warna
+    #05386b : Biru Tua
+    #379683: Hijau tua
+    #5cdb95: Hijau header page
+    #8ee4af: hijau main page
+    #edf5e1: cream
+*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #01101c;
+    font-family: 'Poppins', sans-serif;
+    color: lightsalmon;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    height: 75px;
+    /* background-color: #04101b; */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+nav .logo{
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 7px;
+    font-size: 2.5em;
+    margin: 0 5%;
+
+}
+nav .logo span{
+    color: lightsalmon;
+    letter-spacing: 3px;
+}
+
+nav .logo a{
+    text-decoration: none;
+    color: rgb(223, 220, 210);
+    transition: all 0.3s;
+}
+
+nav .logo a:hover{
+    text-decoration: none;
+    color: lightsalmon;
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 33%;
+    justify-content: space-around;
+    margin: auto 30px;
+    letter-spacing: 1.5px;
+    margin-right: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(236, 232, 219);
+    transition: all 0.3s;
+    padding: 5px 20px;
+    font-size: 0.75em;
+}
+
+nav ul li a.contact-me{
+    background-color: #ee7358;
+    border-radius: 10px;
+}
+nav ul li a.contact-me:hover{
+    background-color: salmon;
+    color: rgb(236, 232, 219);
+}
+
+ul li a:hover{
+    color :rgb(204, 198, 176);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #04192b;
+    border-radius: 10px;
+}
+
+nav .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+    height: 18px;
+}
+
+nav .hamburger-menu span{
+    width: 30px;
+    height: 1.6px;
+    background-color: white;
+    transition: all 0.7s;
+}
+.hamburger-menu span:first-child.checked{
+    animation: hamToExit_one 1s;
+    transform-origin: 0 0;
+}
+/* .hamburger-menu #two{
+
+}
+.hamburger-menu #three{
+
+} */
+
+
+nav.nav-colored { 
+    background-color:#020b14;
+    transition: all 0.3s;
+ }
+nav.nav-transparent { 
+    background-color:transparent;
+    transition: all 0.3s;
+}
+
+.about-content{
+    margin: 100px 50px;
+    line-height: 2em;
+    animation: transitionIn 2s;
+    text-align: center;
+    color: rgb(223, 220, 210);
+    font-size: 1.25em;
+}
+
+.about-content h3{
+    text-align: center;
+    font-size: 2.1em;
+    color: lightsalmon;
+    margin-bottom: 20px;
+}
+
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-270deg);
+        transform: rotateY(-30deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+        transform: rotateY(0);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    nav ul{
+        width: 50%;
+        font-size: 0.85em;
+    }
+    nav .logo a{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav{
+        top:0;
+        width: 100%;
+        position: fixed;
+        background-color:#01101f;
+    }
+
+    nav .logo a{
+        font-size: 0.9em;
+    }
+    nav{
+        z-index: 1;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.2em;
+        margin-right: 0;
+        background-color: coral;
+        height: 100vh;
+        width: 60%;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    nav .hamburger-menu {
+        display: flex;
+        z-index: 1;
+        cursor: pointer;
+    }
+    nav ul li a.contact-me{
+        background: none;
+    }
+    nav ul li a.contact-me:hover{
+        background: coral;
+        color: rgb(204, 198, 176);
+    }
+    ul li a:hover{
+        background-color: coral;
+    }
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .about-content{
+        margin-left: 35px;
+        margin-right: 35px;
+        line-height: 1.75em;
+    }
+    .hamburger-menu span{
+        transition: all 1s;
+    }
+    .hamburger-menu span:first-child{
+        transform-origin: 0 0;
+    }
+    .hamburger-menu span:last-child{
+        transform-origin: 0 100%;
+    }
+    .hamburger-menu span:first-child.exit{
+        transition:all 1s;
+        transform: rotate(40deg);
+    }
+    .hamburger-menu span:nth-child(2).exit{
+        opacity: 0;
+    }
+    .hamburger-menu span:last-child.exit{
+        transform: rotate(-40deg) translate(-1px, 2px);
+    }
+}
